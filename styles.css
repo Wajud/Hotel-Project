@@ -11,6 +11,7 @@
 body{
     color: #fff;
     font-family: "Roboto", sans-serif;
+    
 }
 
 p{
@@ -70,6 +71,9 @@ ul li:hover{
     background-color: rgba(17, 127, 131, 0.4);
 }
 
+button:hover{
+    cursor: pointer;
+}
 /**End of Header Styles**/
 
 /**Section 1 styles**/
@@ -80,7 +84,7 @@ ul li:hover{
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    height: 75vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -142,6 +146,7 @@ ul li:hover{
 .section-2 .image-container{
     width: 50%;
     max-height: 350px;
+    /* display: none; */
 }
 
 .section-2 img{
@@ -192,6 +197,8 @@ ul li:hover{
 
 .section-3{
     display: flex;
+    background-color: #fff;
+    z-index: 2;
   
 }
 
@@ -231,6 +238,7 @@ ul li:hover{
 /*End of Section 3 styles*/
 
 /*Footer*/
+
 footer{
     background-color: rgb(71, 236, 241);
     text-align: center;
@@ -306,6 +314,7 @@ footer{
     border-radius: 50%;
     width: 100px;
     height: 70px;
+    object-fit: cover;
 }
 
 .about-section-2 .card p{
@@ -331,7 +340,7 @@ main.contact input[type="submit"]{
     border: none;
     background-color: #000;
     padding: 5px 10px;
-    margin: 15px 0 20px;;
+    margin: 15px 0 70px;;
     border-radius: 3px;
     letter-spacing: 1.1px;
     font-weight: 600;
@@ -358,54 +367,75 @@ textarea{
     width: 300px;
 }
 
+
+
 /**Media Queries**/
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
+
+    nav li{
+        padding: 0 10px;
+      
+    }
+    
     .section-2 {
-       flex-direction: column;
-    
-    }  
-
-    .section-2 .image-container{
-        width: 100%;
-    
-    }
-    
-    .section-2 img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-    
-    .section-2 .text{
-        width: 100%;
-    }
-
-    .section-2 button{
-        margin-bottom: 20px;
-    }
-
-    .section-3{
         flex-direction: column;
-    }
-
-    .section-3 .box{
-        width: 100%;
-    }
-
-    .contact-footer{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin-top: 40px;
-    }
-    
-
-    .min-height{
-        min-height: 100vh;
-        background-color: red;
-        position: relative;
-    } 
-
+     
+     }  
+ 
+     .section-2 .image-container{
+         width: 100%;
+         max-height: 300px;
+         z-index: 3;
+     
+     }
+   
+     .section-2 img{
+         height: 300px;
+         width: 100%;
+         object-fit: cover;
+         object-position: 40% 34% ;
+     }
+     
+     .section-2 .text{
+         width: 100%;
+     }
+ 
+     .section-2 button{
+         margin-bottom: 20px;
+     }
+ 
+     .section-3{
+         flex-direction: column;
+     }
+ 
+     .section-3 .box{
+         width: 100%;
+     }
+ 
+     .about-section-1 .image-container{
+         transform: translateY(70px);
+         display: flex;
+         justify-content: flex-end;
+     }
+ 
+     .about-section-1 img{
+         width: 100px;
+         height: 100px;
+     }
+ 
+     .about-section-2{
+        padding-bottom: 30px;
+     }
+ 
+     .about-section-2 img{
+         width: 70px;
+         transform: translateY(20px);
+         object-fit: fill;
+     }
+ 
+     .about-section-2 p{
+         transform: translateY(-14px);
+     }
+ 
 }
